@@ -80,12 +80,29 @@ export default function Index() {
           ))
 
         )}
-         <Pressable onPress={()=>{router.push("/home")}}
+        <View style={styles.buttonAlign}>
+
+       
+        <Pressable onPress={()=>{router.push("/home")}}
         style={styles.button}>
         
-          <Text style={styles.text}> Home Page </Text>
+        <Text style={styles.text}> Home Page </Text>
         
-      </Pressable>
+       </Pressable>
+       <Pressable onPress={()=>{router.push("/update")}}
+        style={styles.button}>
+        
+        <Text style={styles.text}> Delete Dish </Text>
+        
+       </Pressable>
+
+       <Pressable onPress={()=>{router.push("/delete")}}
+        style={styles.button}>
+        
+        <Text style={styles.text}> Update Dish</Text>
+        
+       </Pressable>
+      </View>
     
 
     </ScrollView>
@@ -106,6 +123,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign:"center",
     marginBottom: 20,
+  },
+  buttonAlign:{
+    justifyContent:"space-between",
+    alignItems:"center",
+    gap: 5 ,
+    flexDirection: "row"
   },
   noDishes:{
     textAlign:"center",

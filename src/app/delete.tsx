@@ -9,7 +9,7 @@ export default function Index() {
 
      <Image
      source={require("@/assets/images/Chef Joe.png")}
-       style={styles.webImage}/>
+       style={styles.webImage} resizeMode="contain"/>
 
       <Text style={styles.heading}>Dish Information</Text>
 
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     justifyContent:"center",
   },
   heading:{
-     fontSize: 30,
+     fontSize: 20,
     fontWeight: "bold",
     textAlign:"center",
     marginBottom: 20,

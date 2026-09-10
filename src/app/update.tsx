@@ -7,7 +7,7 @@ export default function Index() {
      contentContainerStyle={styles.contentContainer}>  
      <Image
      source={require("@/assets/images/Chef Joe.png")}
-     style={styles.webImage}
+     style={styles.webImage} resizeMode="contain"
       />
       <Text style={styles.heading}>Dish Information</Text>
       <Pressable onPress={()=>{router.push("/home")}}
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     height: 120,    
   },
   heading:{
-    fontSize: 30,
+    fontSize: 20,
     fontWeight: "bold",
     textAlign:"center",
     marginBottom: 20,

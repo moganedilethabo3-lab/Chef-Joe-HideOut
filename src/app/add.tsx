@@ -111,7 +111,7 @@ export default function Index() {
 
 
       <View style={styles.buttonContainer}>
-         
+      <View style={styles.buttonAlign}>
 
       <Pressable style={styles.button}
       onPress={saveDish} >
@@ -130,6 +130,7 @@ export default function Index() {
           <Text style={styles.text}> Home Page </Text>
         
       </Pressable>
+      </View>
 
       
       </View>
@@ -149,6 +150,12 @@ const styles = StyleSheet.create({
    contentContainer:{
     alignItems:"center",
     justifyContent:"center",
+  },
+  buttonAlign:{
+    justifyContent:"space-between",
+    alignItems:"center",
+    gap: 5 ,
+    flexDirection: "row"
   },
   dropContainer:{
     marginStart:10,

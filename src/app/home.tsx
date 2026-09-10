@@ -19,41 +19,47 @@ export default function Index() {
       </Text>
      
      <View style={styles.imageRow}> 
-      <View style={styles.textAlign}>
+      
 
      <Image
      source={require("@/assets/images/Home Images/View.png")}
      style={styles.image}>
      </Image>
-
+     <View style={styles.textAlign}>
      <Pressable onPress={()=>{router.push("/view")}}>
       <Text style={styles.subHeading}> View Menu </Text>
      </Pressable>
      </View>
 
-      <View style={styles.textAlign}>
+      
      <Image
      source={require("@/assets/images/Home Images/Add.png")}
      style={styles.image}>
      </Image>
-    
+
+     <View style={styles.textAlign}>
      <Pressable onPress={()=>{router.push("/add")}}>
       <Text style={styles.subHeading}> Add New Dish To Menu </Text>
      </Pressable>
      </View>
 
-      <View style={styles.textAlign}>
+      
      <Image
      source={require("@/assets/images/Home Images/Manage.png")}
      style={styles.image}> 
      </Image>
 
+     <View style={styles.textAlign}>
      <Pressable onPress={()=>{router.push("/manage")}}>
       <Text style={styles.subHeading}> Manage Menu </Text>
      </Pressable>
      </View>
 
      </View>
+
+     
+
+     
 
 
 
@@ -87,12 +93,12 @@ const styles = StyleSheet.create({
     flexDirection: "column"
   },
   image:{
-    width:255,
-    height:250,
+    width:155,
+    height:155,
     borderRadius: 10,
   },
   heading:{
-   fontSize: 30,
+   fontSize: 25,
     fontWeight: "bold",
     textAlign:"center",
     marginBottom: 5 ,
@@ -105,7 +111,7 @@ const styles = StyleSheet.create({
   subHeading:{
    fontSize: 15,
     fontWeight: "bold",
-    textAlign:"center",
+    textAlign:"auto",
     marginBottom: 10,
   },
   
