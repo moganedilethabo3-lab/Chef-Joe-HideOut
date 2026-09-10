@@ -10,14 +10,25 @@ export default function Index() {
      style={styles.webImage} resizeMode="contain"
       />
       <Text style={styles.heading}>Dish Information</Text>
-      <Pressable onPress={()=>{router.push("/home")}}
-        style={styles.button}>
       
+      <View style={styles.buttonAlign}>
+
+       
+        <Pressable onPress={()=>{router.push("/home")}}
+        style={styles.button}>
         
         <Text style={styles.text}> Home Page </Text>
         
+       </Pressable>
+       <Pressable style={styles.button}>
         
-      </Pressable>
+        <Text style={styles.text}> Update Dish </Text>
+        
+       </Pressable>
+
+      
+      </View>
+
     </ScrollView>
   );
 }
@@ -31,6 +42,12 @@ const styles = StyleSheet.create({
     alignItems:"center",
     justifyContent:"center",
   },
+  buttonAlign:{
+    justifyContent:"space-between",
+    alignItems:"center",
+    gap: 5 ,
+    flexDirection: "row"
+  },
   webImage:{
     width: "100%",
     height: 120,    
@@ -41,7 +58,7 @@ const styles = StyleSheet.create({
     textAlign:"center",
     marginBottom: 20,
   },
-  button:{
+ button:{
     backgroundColor:"blue",
     paddingVertical: 12,
     paddingHorizontal: 20,

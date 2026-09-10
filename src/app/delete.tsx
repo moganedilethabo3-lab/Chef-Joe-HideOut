@@ -13,15 +13,23 @@ export default function Index() {
 
       <Text style={styles.heading}>Dish Information</Text>
 
-      <Pressable onPress={()=>{router.push("/home")}}
-      
+      <View style={styles.buttonAlign}>
+
+       
+        <Pressable onPress={()=>{router.push("/home")}}
         style={styles.button}>
         
+        <Text style={styles.text}> Home Page </Text>
         
-       <Text style={styles.text}> Home Page </Text>
-       
+       </Pressable>
+       <Pressable style={styles.button}>
         
-      </Pressable>
+        <Text style={styles.text}> Delete Dish </Text>
+        
+       </Pressable>
+
+      
+      </View>
     </ScrollView>
   );
 }
@@ -40,6 +48,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign:"center",
     marginBottom: 20,
+  },
+   buttonAlign:{
+    justifyContent:"space-between",
+    alignItems:"center",
+    gap: 5 ,
+    flexDirection: "row"
   },
   webImage:{
     width: "100%",

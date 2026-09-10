@@ -89,14 +89,14 @@ export default function Index() {
         <Text style={styles.text}> Home Page </Text>
         
        </Pressable>
-       <Pressable onPress={()=>{router.push("/update")}}
+       <Pressable onPress={()=>{router.push("/delete")}}
         style={styles.button}>
         
         <Text style={styles.text}> Delete Dish </Text>
         
        </Pressable>
 
-       <Pressable onPress={()=>{router.push("/delete")}}
+       <Pressable onPress={()=>{router.push("/update")}}
         style={styles.button}>
         
         <Text style={styles.text}> Update Dish</Text>

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
@@ -58,3 +59,6 @@ Join our community of developers creating universal apps.
 =======
 # Chef-Joe-HideOut
 >>>>>>> d4c55c253d1e60ff612369bb251a3642de7ef1bc
+=======
+<h1> Chef Joe HideOut </h1>
+>>>>>>> 2a65c73961b948afd948119934e260917d20c2fa
