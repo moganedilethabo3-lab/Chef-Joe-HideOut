@@ -7,6 +7,7 @@ export default function Index() {
      contentContainerStyle={styles.contentContainer}>  
      <Image
      source={require("@/assets/images/Chef Joe.png")}
+     style={styles.webImage}
       />
       <Text style={styles.heading}>Dish Information</Text>
       <Pressable onPress={()=>{router.push("/home")}}
@@ -29,6 +30,10 @@ const styles = StyleSheet.create({
    contentContainer:{
     alignItems:"center",
     justifyContent:"center",
+  },
+  webImage:{
+    width: "100%",
+    height: 120,    
   },
   heading:{
     fontSize: 30,

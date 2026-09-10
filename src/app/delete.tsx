@@ -9,7 +9,7 @@ export default function Index() {
 
      <Image
      source={require("@/assets/images/Chef Joe.png")}
-      />
+       style={styles.webImage}/>
 
       <Text style={styles.heading}>Dish Information</Text>
 
@@ -40,6 +40,10 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign:"center",
     marginBottom: 20,
+  },
+  webImage:{
+    width: "100%",
+    height: 120,    
   },
   button:{
     backgroundColor:"blue",

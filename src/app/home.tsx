@@ -11,7 +11,7 @@ export default function Index() {
 
      <Image
      source={require("@/assets/images/Chef Joe.png")}
-     >  
+      style={styles.webImage} resizeMode="contain"    >  
      </Image>
 
      <Text style={styles.heading}>
@@ -19,6 +19,7 @@ export default function Index() {
       </Text>
      
      <View style={styles.imageRow}> 
+      <View style={styles.textAlign}>
 
      <Image
      source={require("@/assets/images/Home Images/View.png")}
@@ -28,9 +29,9 @@ export default function Index() {
      <Pressable onPress={()=>{router.push("/view")}}>
       <Text style={styles.subHeading}> View Menu </Text>
      </Pressable>
+     </View>
 
-
-
+      <View style={styles.textAlign}>
      <Image
      source={require("@/assets/images/Home Images/Add.png")}
      style={styles.image}>
@@ -39,7 +40,9 @@ export default function Index() {
      <Pressable onPress={()=>{router.push("/add")}}>
       <Text style={styles.subHeading}> Add New Dish To Menu </Text>
      </Pressable>
+     </View>
 
+      <View style={styles.textAlign}>
      <Image
      source={require("@/assets/images/Home Images/Manage.png")}
      style={styles.image}> 
@@ -48,6 +51,7 @@ export default function Index() {
      <Pressable onPress={()=>{router.push("/manage")}}>
       <Text style={styles.subHeading}> Manage Menu </Text>
      </Pressable>
+     </View>
 
      </View>
 
@@ -65,6 +69,12 @@ const styles = StyleSheet.create({
     padding:16,
    backgroundColor:"#ffff",
 
+  },
+  textAlign:{
+    flexDirection: "row",
+    alignContent: "center",
+    marginBottom: 10,
+    
   },
   contentContainer:{
     alignItems:"center",
@@ -88,11 +98,16 @@ const styles = StyleSheet.create({
     marginBottom: 5 ,
     
   },
+  webImage:{
+    width: "100%",
+    height: 120,    
+  },
   subHeading:{
-   fontSize: 20,
+   fontSize: 15,
     fontWeight: "bold",
     textAlign:"center",
     marginBottom: 10,
   },
+  
 
 });

@@ -62,6 +62,7 @@ export default function Index() {
 
      <Image
      source={require("@/assets/images/Chef Joe.png")}
+     style={styles.webImage} resizeMode="contain"
      >
      </Image>
      <View style={styles.formContainer}>
@@ -157,13 +158,17 @@ const styles = StyleSheet.create({
     width:"100%",
     height:175,
   },
+  webImage:{
+    width: "100%",
+    height: 120,    
+  },
   dropDown:{
     backgroundColor:"pink",
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 8,
     marginBottom: 10,
-    height:20,
+    height:55,
   },
   formContainer:{
     position:"relative",

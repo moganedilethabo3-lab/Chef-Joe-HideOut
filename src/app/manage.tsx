@@ -152,6 +152,10 @@ const styles = StyleSheet.create({
   dishPrice:{
     fontSize: 18,
     marginTop: 16,
-  }
+  },
+  webImage:{
+    width: "100%",
+    height: 120,    
+  },
 
 });
