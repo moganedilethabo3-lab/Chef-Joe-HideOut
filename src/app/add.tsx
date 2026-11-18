@@ -16,7 +16,7 @@ export default function Index() {
 
   const saveDish = async() =>{
 
-    if (!dishName || !description || !selectedCatergory|| !price){
+    if (!dishName.trim() || !description.trim()  || !selectedCatergory.trim() || !price.trim() ){
     Alert.alert(
     "Missing Dish Information",
     "Please complete all field before saving the Dish to the menu."
@@ -24,12 +24,33 @@ export default function Index() {
     );
     return;
     }
+
+    if(dishName.trim().length < 2){
+      Alert.alert("Invalid Dish Name", "The dish name should contain atleast 2 characters")
+      ;return;
+    }
+
+    if (!/^\d+(\.\d{1,2})?$/.test(price.trim())) {
+      Alert.alert(
+        "Invalid Price", "Enter a valid price in Rands"
+      );return;
+    }
+
+    const numericPrice=Number(price)
+
+    if(!Number.isFinite(numericPrice)|| numericPrice <=0) {
+      Alert.alert(
+        "Invalid Price",
+        "The dish price must be grester thsn 0"
+      );return;
+    }
+
     try{
     const newDish ={
     id:Date.now().toString(),
-    dishName: dishName,
-     description: description,
-    catergory: selectedCatergory,
+    dishName: dishName.trim(),
+     description: description.trim(),
+    catergory: selectedCatergory.trim(),
      price: price,
      };
       const existingDishes =
@@ -42,6 +63,17 @@ export default function Index() {
       "dishes",
         JSON.stringify(dishes)
       );
+      [
+        {
+          text:"OK",
+          onpress: () =>{
+            setDishName("");
+            setDescription("");
+            setSelectedCatergory("");
+            router.replace("/view");
+          },
+        },
+      ]
         
       Alert.alert("Success", "Dish saved successfully onto menu!" );
        
@@ -71,22 +103,29 @@ export default function Index() {
             <Text style={styles.label}>
                 Dish Name
             </Text>
+
             <TextInput style={styles.input}
             value={dishName}
             onChangeText={setDishName} 
-            placeholder="Enter the Dish Name"/>
+            placeholder="Enter the Dish Name"
+            maxLength={50}
+            />
 
             <Text style={styles.label}>
                 Dish Description
             </Text>
+
             <TextInput style={styles.input} 
             value={description}
             onChangeText={setDescription} 
-            placeholder="Enter the Dish's Description"/>
+            placeholder="Enter the Dish's Description"
+            multiline
+            />
 
             <Text style={styles.label}>
            Dish Catergory
             </Text>
+
           <Picker style={styles.dropDown}
            selectedValue={selectedCatergory}
             onValueChange={(itemValue, itemIndex) =>
@@ -101,10 +140,17 @@ export default function Index() {
             <Text style={styles.label}>
                 Dish Price
             </Text>
+
             <TextInput style={styles.input} 
              value={price}
             onChangeText={setPrice} 
-            placeholder="Enter the Dish Price"/>
+            placeholder="Enter the Dish Price"
+            keyboardType="decimal-pad"
+          maxLength={10}
+          />
+          <Text style={styles.priceHint}>
+          Enter the price in South African Rands (R).
+        </Text>
 
         </View> 
           
@@ -177,6 +223,11 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     height:55,
   },
+  priceHint: {
+    fontSize: 12,
+    color: "gray",
+    marginTop: 3,
+  },
   formContainer:{
     position:"relative",
     backgroundColor:"white",
@@ -218,6 +269,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     padding: 12,
     fontSize: 20,
+    
   },
 
 
