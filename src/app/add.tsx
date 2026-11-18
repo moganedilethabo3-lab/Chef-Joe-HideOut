@@ -14,78 +14,98 @@ export default function Index() {
 
 
 
-  const saveDish = async() =>{
+ const saveDish = async () => {
 
-    if (!dishName.trim() || !description.trim()  || !selectedCatergory.trim() || !price.trim() ){
+  
+  if (
+    !dishName.trim() ||
+    !description.trim() ||
+    !selectedCatergory.trim() ||
+    !price.trim()
+  ) {
     Alert.alert(
-    "Missing Dish Information",
-    "Please complete all field before saving the Dish to the menu."
-            
+      "Missing Dish Information",
+      "Please complete all fields before saving the dish."
     );
     return;
-    }
+  }
 
-    if(dishName.trim().length < 2){
-      Alert.alert("Invalid Dish Name", "The dish name should contain atleast 2 characters")
-      ;return;
-    }
+  if (dishName.trim().length < 2) {
+    Alert.alert(
+      "Invalid Dish Name",
+      "The dish name should contain at least 2 characters."
+    );
+    return;
+  }
 
-    if (!/^\d+(\.\d{1,2})?$/.test(price.trim())) {
-      Alert.alert(
-        "Invalid Price", "Enter a valid price in Rands"
-      );return;
-    }
+  if (!/^\d+(\.\d{1,2})?$/.test(price.trim())) {
+    Alert.alert(
+      "Invalid Price",
+      "Enter a valid price in Rands, for example 85 or 85.50."
+    );
+    return;
+  }
 
-    const numericPrice=Number(price)
+  const numericPrice = Number(price);
 
-    if(!Number.isFinite(numericPrice)|| numericPrice <=0) {
-      Alert.alert(
-        "Invalid Price",
-        "The dish price must be grester thsn 0"
-      );return;
-    }
+  if (!Number.isFinite(numericPrice) || numericPrice <= 0) {
+    Alert.alert(
+      "Invalid Price",
+      "The dish price must be greater than R0.00."
+    );
+    return;
+  }
 
-    try{
-    const newDish ={
-    id:Date.now().toString(),
-    dishName: dishName.trim(),
-     description: description.trim(),
-    catergory: selectedCatergory.trim(),
-     price: price,
-     };
-      const existingDishes =
-      await AsyncStorage.getItem("dishes");
-      const dishes =existingDishes
-      ? JSON.parse(existingDishes): [];
-      dishes.push(newDish);
-      await AsyncStorage.setItem(
-  
+  try {
+
+    const existingDishes = await AsyncStorage.getItem("dishes");
+
+    const dishes = existingDishes
+      ? JSON.parse(existingDishes)
+      : [];
+
+    const newDish = {
+      id: Date.now().toString(),
+      dishName: dishName.trim(),
+      description: description.trim(),
+      catergory: selectedCatergory.trim(),
+      price: numericPrice,
+    };
+
+    dishes.push(newDish);
+
+    await AsyncStorage.setItem(
       "dishes",
-        JSON.stringify(dishes)
-      );
+      JSON.stringify(dishes)
+    );
+
+    Alert.alert(
+      "Success",
+      `${newDish.dishName} has been successfully saved to the menu!`,
       [
         {
-          text:"OK",
-          onpress: () =>{
+          text: "OK",
+          onPress: () => {
             setDishName("");
             setDescription("");
             setSelectedCatergory("");
+            setPrice("");
+
             router.replace("/view");
           },
         },
       ]
-        
-      Alert.alert("Success", "Dish saved successfully onto menu!" );
-       
-      router.replace("/view");
+    );
 
+  } catch (error) {
+    console.error("Error saving dish:", error);
 
-    }
-    catch (error){
-    console.error("Error saving dish:",error);
-      Alert.alert("Error","The dish could not be saved");
-    }
-  };
+    Alert.alert(
+      "Error",
+      "The dish could not be saved. Please try again."
+    );
+  }
+};
  
   
   return (
