@@ -90,7 +90,8 @@ const styles = StyleSheet.create({
     justifyContent:"space-between",
     alignItems:"center",
     gap: 5 ,
-    flexDirection: "column"
+    flexDirection: "column",
+    
   },
   image:{
     width:155,
@@ -113,7 +114,9 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign:"auto",
     marginBottom: 10,
+
   },
+ 
   
 
 });

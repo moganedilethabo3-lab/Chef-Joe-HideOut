@@ -216,7 +216,7 @@ const styles = StyleSheet.create({
     height: 120,    
   },
   dropDown:{
-    backgroundColor:"pink",
+    backgroundColor:"#6d597a",
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 8,
@@ -227,10 +227,11 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: "gray",
     marginTop: 3,
+   
   },
   formContainer:{
     position:"relative",
-    backgroundColor:"white",
+     backgroundColor: "#cdb4db",
     borderWidth:1,
     borderColor:"black",
     borderRadius:8,
@@ -247,7 +248,7 @@ const styles = StyleSheet.create({
     alignItems:"flex-end",
   },
   button:{
-    backgroundColor:"blue",
+    backgroundColor:"#6d597a",
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 8,

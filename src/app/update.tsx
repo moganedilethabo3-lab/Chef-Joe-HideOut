@@ -470,7 +470,7 @@ const styles = StyleSheet.create({
 
   contentContainer: {
     alignItems: "center",
-    paddingBottom: 30,
+    justifyContent:"center",
   },
 
   webImage: {
@@ -483,6 +483,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     marginBottom: 10,
+     color: "#354933",
   },
 
   instruction: {
@@ -490,23 +491,25 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginHorizontal: 20,
     marginBottom: 15,
+    
   },
 
   subHeading: {
     fontSize: 20,
     fontWeight: "bold",
     marginBottom: 12,
+     color:"#cdb4db",
   },
 
   input: {
-    width: "100%",
+    width: "90%",
     borderWidth: 1,
     borderColor: "black",
     borderRadius: 8,
-    padding: 12,
-    backgroundColor: "white",
+    padding: 13,
+   backgroundColor: "#cdb4db",
     fontSize: 16,
-    marginBottom: 10,
+    marginBottom: 15,
   },
 
   dishCard: {
@@ -520,7 +523,7 @@ const styles = StyleSheet.create({
   },
 
   selectedCard: {
-    borderColor: "green",
+    borderColor:  "#6d597a",
     borderWidth: 3,
     backgroundColor: "#e6ffe6",
   },
@@ -539,13 +542,13 @@ const styles = StyleSheet.create({
   selectText: {
     fontSize: 14,
     fontWeight: "bold",
-    color: "blue",
+    color: "#6d597a",
     marginTop: 10,
   },
 
   formContainer: {
-    width: "90%",
-    backgroundColor: "white",
+    width: "55%",
+     backgroundColor: "#cdb4db",
     borderWidth: 1,
     borderColor: "black",
     borderRadius: 10,
@@ -568,7 +571,7 @@ const styles = StyleSheet.create({
   },
 
   descriptionInput: {
-    minHeight: 90,
+    minHeight: 55,
     textAlignVertical: "top",
   },
 
@@ -593,7 +596,7 @@ const styles = StyleSheet.create({
   },
 
   updateButton: {
-    backgroundColor: "green",
+    backgroundColor: "#6d597a",
     padding: 14,
     borderRadius: 8,
     alignItems: "center",
@@ -601,15 +604,16 @@ const styles = StyleSheet.create({
   },
 
   clearButton: {
-    backgroundColor: "#555555",
+    backgroundColor: "#6d597a",
     padding: 14,
     borderRadius: 8,
     alignItems: "center",
     marginTop: 10,
+    width: "90%",
   },
 
   homeButton: {
-    backgroundColor: "blue",
+    backgroundColor: "#6d597a",
     width: "90%",
     padding: 14,
     borderRadius: 8,
@@ -621,6 +625,7 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 16,
     fontWeight: "bold",
+    
   },
   buttonAlign: {
   justifyContent: "center",

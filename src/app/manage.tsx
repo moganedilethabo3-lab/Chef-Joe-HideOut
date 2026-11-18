@@ -123,6 +123,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign:"center",
     marginBottom: 20,
+     color: "#354933"
   },
   buttonAlign:{
     justifyContent:"space-between",
@@ -133,10 +134,11 @@ const styles = StyleSheet.create({
   noDishes:{
     textAlign:"center",
     fontSize: 18,
-    marginTop: 30
+    marginTop: 30,
+    color:"#cdb4db",
   },
    button:{
-    backgroundColor:"blue",
+    backgroundColor:"#6d597a",
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 8,

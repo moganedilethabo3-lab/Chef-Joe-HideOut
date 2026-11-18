@@ -242,26 +242,31 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign:"center",
     marginBottom: 20,
+     color: "#354933"
   },
   noDishes:{
     textAlign:"center",
     fontSize: 18,
-    marginTop: 30
+    marginTop: 30,
+     color: "#354933"
   },
    button:{
-    backgroundColor:"blue",
+    backgroundColor:"#6d597a",
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 8,
-    marginBottom: 10
+    marginBottom: 10,
+    width:"60%",
+    justifyContent: "center"
   },
   text:{
     color:"white",
     fontWeight:"bold",
+    textAlign:"center"
   },
   filterContainer: {
     width: "90%",
-    backgroundColor: "#f2f2f2",
+    backgroundColor: "#cdb4db",
     borderWidth: 1,
     borderColor: "black",
     borderRadius: 10,
@@ -280,7 +285,7 @@ const styles = StyleSheet.create({
     borderColor: "black",
     borderRadius: 8,
     padding: 12,
-    backgroundColor: "white",
+   backgroundColor:  "#6d597a",
     fontSize: 16,
   },
 
@@ -290,10 +295,11 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     backgroundColor: "pink",
     marginBottom: 8,
+    
   },
 
   clearButton: {
-    backgroundColor: "#555555",
+    backgroundColor: "#6d597a",
     padding: 12,
     borderRadius: 8,
     alignItems: "center",

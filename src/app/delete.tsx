@@ -296,6 +296,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign:"center",
     marginBottom: 20,
+     color: "#354933"
   },
    buttonAlign:{
     justifyContent:"center",
@@ -315,7 +316,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   button:{
-    backgroundColor:"blue",
+    backgroundColor:"#6d597a",
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 8,
@@ -332,7 +333,7 @@ const styles = StyleSheet.create({
     borderColor: "black",
     borderRadius: 8,
     padding: 13,
-    backgroundColor: "white",
+    backgroundColor: "#cdb4db",
     fontSize: 16,
     marginBottom: 15,
   },
@@ -341,6 +342,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     marginBottom: 12,
+    color:"#cdb4db",
   },
 
   dishCard: {
@@ -354,7 +356,7 @@ const styles = StyleSheet.create({
   },
 
   selectedCard: {
-    borderColor: "green",
+    borderColor: "#6d597a",
     borderWidth: 3,
     backgroundColor: "#e6ffe6",
   },
@@ -373,7 +375,7 @@ const styles = StyleSheet.create({
   selectText: {
     fontSize: 14,
     fontWeight: "bold",
-    color: "blue",
+    color:  "#6d597a",
     marginTop: 10,
   },
 
@@ -406,7 +408,7 @@ const styles = StyleSheet.create({
   },
 
   deleteButton: {
-    backgroundColor: "red",
+    backgroundColor: "#461220",
     width: "90%",
     padding: 14,
     borderRadius: 8,
@@ -415,7 +417,7 @@ const styles = StyleSheet.create({
   },
 
   clearButton: {
-    backgroundColor: "#555555",
+    backgroundColor: "#6d597a",
     width: "90%",
     padding: 14,
     borderRadius: 8,
@@ -424,7 +426,7 @@ const styles = StyleSheet.create({
   },
 
   homeButton: {
-    backgroundColor: "blue",
+    backgroundColor:"#6d597a",
     width: "90%",
     padding: 14,
     borderRadius: 8,
